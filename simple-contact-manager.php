@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Simple Contact Manager
- * Plugin URI: https://thebitcraft.com/plugins/simple-contact-manager
+ * Plugin URI: https://github.com/beyond88/simple-contact-manager
  * Description: A simple contact form manager that stores submissions in a custom database table.
  * Version: 1.0.0
- * Author: TheBitCraft
- * Author URI: https://thebitcraft.com
+ * Author: Mohiuddin Abdul Kader
+ * Author URI: https://github.com/beyond88
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: simple-contact-manager
@@ -72,6 +72,9 @@ final class Simple_Contact_Manager {
         // Deactivation hook
         register_deactivation_hook( SCM_PLUGIN_FILE, array( $this, 'deactivate' ) );
 
+        // Load text domain on init
+        add_action( 'init', array( $this, 'load_textdomain' ) );
+
         // Initialize plugin after plugins loaded
         add_action( 'plugins_loaded', array( $this, 'init' ) );
     }
@@ -99,12 +102,20 @@ final class Simple_Contact_Manager {
     }
 
     /**
+     * Load plugin text domain for translations
+     */
+    public function load_textdomain() {
+        load_plugin_textdomain(
+            'simple-contact-manager',
+            false,
+            dirname( SCM_PLUGIN_BASENAME ) . '/languages'
+        );
+    }
+
+    /**
      * Initialize plugin
      */
     public function init() {
-        // Load text domain
-        load_plugin_textdomain( 'simple-contact-manager', false, dirname( SCM_PLUGIN_BASENAME ) . '/languages' );
-
         // Initialize admin
         if ( is_admin() ) {
             new SimpleContactManager\Admin\Menu();
