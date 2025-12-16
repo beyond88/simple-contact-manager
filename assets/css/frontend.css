@@ -1,0 +1,141 @@
+/**
+ * Simple Contact Manager - Frontend Styles
+ */
+
+/* Form wrapper */
+.scm-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.scm-form-title {
+    margin: 0 0 25px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/* Messages */
+.scm-message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.scm-message-success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.scm-message-error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Form rows */
+.scm-form-row {
+    margin-bottom: 20px;
+}
+
+.scm-form-row label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.scm-form-row .required {
+    color: #e74c3c;
+}
+
+/* Input fields */
+.scm-input,
+.scm-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.scm-input:focus,
+.scm-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.scm-input::placeholder,
+.scm-textarea::placeholder {
+    color: #aaa;
+}
+
+.scm-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit button */
+.scm-form-submit {
+    margin-top: 25px;
+}
+
+.scm-submit-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scm-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+}
+
+.scm-submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .scm-form-wrapper {
+        padding: 20px;
+        margin: 0 15px;
+        border-radius: 10px;
+    }
+
+    .scm-form-title {
+        font-size: 20px;
+    }
+
+    .scm-input,
+    .scm-textarea {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .scm-submit-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+}
