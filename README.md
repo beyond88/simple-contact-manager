@@ -116,7 +116,3 @@ add_action( 'scm_after_submission', function( $submission_id, $data ) {
 ## License
 
 GPL-2.0-or-later
-
-## Author
-
-TheBitCraft - [https://thebitcraft.com](https://thebitcraft.com)

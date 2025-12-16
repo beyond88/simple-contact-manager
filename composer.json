@@ -1,12 +1,12 @@
 {
-    "name": "thebitcraft/simple-contact-manager",
+    "name": "beyond88/simple-contact-manager",
     "description": "A simple contact form manager plugin for WordPress",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "TheBitCraft",
-            "email": "support@thebitcraft.com"
+            "name": "Mohiuddin",
+            "email": "muhin.cse.diu@gmail.com"
         }
     ],
     "autoload": {
